@@ -361,7 +361,7 @@
                     and opportunities for personal development.
                 </p>
 
-                <a href="#/services>
+                <a href="/services">
                     View Initiative →
                 </a>
 

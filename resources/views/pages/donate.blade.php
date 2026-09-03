@@ -19,7 +19,7 @@
                 rgba(38, 9, 9, 0.88),
                 rgba(38, 9, 9, 0.52)
             ),
-            url('{{ asset('images/donate1.jpg') }}');
+            url('{{ asset('images/donate.jpg') }}');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
