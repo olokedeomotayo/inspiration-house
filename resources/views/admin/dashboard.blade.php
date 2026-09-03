@@ -1,229 +1,288 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.admin')
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('title', 'Admin Dashboard')
 
-    <title>Admin Dashboard | Inspiration House</title>
+@section('page-heading', 'Admin Dashboard')
 
-    <link rel="icon"
-          type="image/x-icon"
-          href="{{ asset('images/favicon/favicon.ico') }}">
+@section('admin-content')
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
+    <!-- WELCOME -->
+    <section class="dashboard-welcome">
 
-<body>
+        <span>Inspiration House</span>
 
-<div class="dashboard-layout">
+        <h2>
+            Welcome back, {{ auth()->user()->name }}
+        </h2>
 
-    <!-- SIDEBAR -->
-    <aside class="dashboard-sidebar">
+        <p>
+            Manage your events, stories, gallery and website
+            content from one place.
+        </p>
 
-        <div class="dashboard-sidebar-logo">
-            <a href="{{ route('admin.dashboard') }}">
-                <img
-                    src="{{ asset('images/Inspirationhx_logo.png') }}"
-                    alt="Inspiration House"
-                >
-            </a>
+    </section>
+
+
+    <!-- STATISTICS -->
+    <section class="dashboard-stats">
+
+        <div class="dashboard-stat-card">
+
+            <span>Events</span>
+
+            <strong>
+                {{ \App\Models\Event::count() }}
+            </strong>
+
         </div>
 
-        <nav class="dashboard-sidebar-nav">
+
+        <div class="dashboard-stat-card">
+
+            <span>Blog Posts</span>
+
+            <strong>0</strong>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <span>Gallery Images</span>
+
+            <strong>
+                {{ \App\Models\EventImage::count() }}
+            </strong>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <span>Team Members</span>
+
+            <strong>0</strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+    <section class="dashboard-section">
+
+        <div class="dashboard-section-header">
+
+            <div>
+
+                <h3>Quick Actions</h3>
+
+                <p>
+                    Quickly manage your website content.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-quick-actions">
 
             <a
-                href="{{ route('admin.dashboard') }}"
-                class="active"
+                href="{{ route('admin.events.create') }}"
+                class="dashboard-action"
             >
-                <span>▦</span>
-                Dashboard
+
+                <strong>Create Event</strong>
+
+                <span>
+                    Add a new event, write-up and gallery.
+                </span>
+
             </a>
 
-            <a href="#">
-                <span>◫</span>
-                Events
+
+            <a
+                href="#"
+                class="dashboard-action"
+            >
+
+                <strong>Create Blog Post</strong>
+
+                <span>
+                    Publish a new story or article.
+                </span>
+
             </a>
 
-            <a href="#">
-                <span>▤</span>
-                Blog
+
+            <a
+                href="#"
+                class="dashboard-action"
+            >
+
+                <strong>Upload Gallery</strong>
+
+                <span>
+                    Add photos to the website gallery.
+                </span>
+
             </a>
 
-            <a href="#">
-                <span>▧</span>
-                Gallery
-            </a>
+        </div>
 
-            <a href="#">
-                <span>♙</span>
-                Team
-            </a>
-
-            <a href="{{ route('home') }}" target="_blank">
-                <span>↗</span>
-                View Website
-            </a>
-
-            <a href="{{ route('profile.edit') }}">
-                <span>⚙</span>
-                Profile
-            </a>
-
-        </nav>
-
-    </aside>
+    </section>
 
 
-    <!-- MAIN -->
-    <div class="dashboard-main">
+    <!-- EVENTS -->
+    <section class="dashboard-section">
 
-        <!-- TOP BAR -->
-        <header class="dashboard-topbar">
+        <div class="dashboard-section-header">
 
-            <h1>Admin Dashboard</h1>
+            <div>
 
-            <div class="dashboard-user">
+                <h3>Events</h3>
 
-                <div class="dashboard-user-avatar">
-                    {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}
-                </div>
-
-                <div class="dashboard-user-info">
-                    <strong>{{ auth()->user()->name }}</strong>
-                    <span>Administrator</span>
-                </div>
-
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <button
-                        type="submit"
-                        class="admin-logout"
-                    >
-                        Logout
-                    </button>
-                </form>
-
-            </div>
-
-        </header>
-
-
-        <!-- CONTENT -->
-        <main class="dashboard-content">
-
-            <div class="dashboard-welcome">
-
-                <span>Inspiration House</span>
-
-                <h2>
-                    Welcome back, {{ auth()->user()->name }}
-                </h2>
+                <p>
+                    Manage events published by Inspiration House.
+                </p>
 
             </div>
 
 
-            <!-- STATISTICS -->
-            <section class="dashboard-stats">
+            <a
+                href="{{ route('admin.events.index') }}"
+                class="btn-primary"
+            >
+                Manage Events
+            </a>
 
-                <div class="dashboard-stat-card">
-                    <span>Events</span>
-                    <strong>0</strong>
-                </div>
-
-                <div class="dashboard-stat-card">
-                    <span>Blog Posts</span>
-                    <strong>0</strong>
-                </div>
-
-                <div class="dashboard-stat-card">
-                    <span>Gallery Images</span>
-                    <strong>0</strong>
-                </div>
-
-                <div class="dashboard-stat-card">
-                    <span>Team Members</span>
-                    <strong>0</strong>
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- QUICK ACTIONS -->
-            <section class="dashboard-section">
-
-                <div class="dashboard-section-header">
-
-                    <h3>Quick Actions</h3>
-
-                </div>
-
-                <div class="dashboard-quick-actions">
-
-                    <a href="#" class="dashboard-action">
-
-                        <strong>Create Event</strong>
-
-                        <span>
-                            Add a new event to the website.
-                        </span>
-
-                    </a>
-
-                    <a href="#" class="dashboard-action">
-
-                        <strong>Create Blog Post</strong>
-
-                        <span>
-                            Publish a new story or article.
-                        </span>
-
-                    </a>
-
-                    <a href="#" class="dashboard-action">
-
-                        <strong>Upload Gallery Image</strong>
-
-                        <span>
-                            Add new photos to the gallery.
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </section>
+        @php
+            $recentEvents = \App\Models\Event::with('images')
+                ->latest('created_at')
+                ->take(5)
+                ->get();
+        @endphp
 
 
-            <!-- RECENT ACTIVITY -->
-            <section class="dashboard-section">
+        @if($recentEvents->count())
 
-                <div class="dashboard-section-header">
+            <div style="overflow-x:auto;">
 
-                    <h3>Recent Activity</h3>
+                <table style="
+                    width:100%;
+                    border-collapse:collapse;
+                ">
 
-                </div>
+                    <thead>
 
-                <div class="dashboard-action">
+                        <tr style="
+                            border-bottom:1px solid #e8dfda;
+                        ">
 
-                    <strong>No activity yet</strong>
+                            <th style="padding:14px;text-align:left;">
+                                Event
+                            </th>
 
-                    <span>
-                        Your recent events, posts and gallery activity
-                        will appear here.
-                    </span>
+                            <th style="padding:14px;text-align:left;">
+                                Date
+                            </th>
 
-                </div>
+                            <th style="padding:14px;text-align:left;">
+                                Pictures
+                            </th>
 
-            </section>
+                            <th style="padding:14px;text-align:left;">
+                                Action
+                            </th>
 
-        </main>
+                        </tr>
 
-    </div>
+                    </thead>
 
-</div>
 
-</body>
-</html>
+                    <tbody>
+
+                        @foreach($recentEvents as $event)
+
+                            <tr style="
+                                border-bottom:1px solid #eee;
+                            ">
+
+                                <td style="padding:14px;">
+
+                                    <strong>
+                                        {{ $event->title }}
+                                    </strong>
+
+                                </td>
+
+
+                                <td style="padding:14px;">
+
+                                    {{ $event->event_date?->format('F j, Y') ?? 'No date' }}
+
+                                </td>
+
+
+                                <td style="padding:14px;">
+
+                                    {{ $event->images->count() }}
+
+                                </td>
+
+
+                                <td style="padding:14px;">
+
+                                    <a
+                                        href="{{ route('admin.events.edit', $event) }}"
+                                        class="btn-primary"
+                                    >
+                                        Edit
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+                        @endforeach
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        @else
+
+            <div style="
+                padding:40px 20px;
+                text-align:center;
+                border:1px dashed #e8dfda;
+                border-radius:12px;
+            ">
+
+                <h3>No events yet</h3>
+
+                <p>
+                    Create your first event to start building
+                    your event history.
+                </p>
+
+                <a
+                    href="{{ route('admin.events.create') }}"
+                    class="btn-primary"
+                >
+                    Create Event
+                </a>
+
+            </div>
+
+        @endif
+
+    </section>
+
+@endsection

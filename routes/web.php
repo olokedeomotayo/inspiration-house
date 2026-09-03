@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +42,11 @@ Route::get('/donate', function () {
     return view('pages.donate');
 })->name('donate');
 
-Route::get('/events', function () {
-    return view('pages.events');
-})->name('events');
+Route::get('/events', [EventController::class, 'index'])
+    ->name('events');
+
+Route::get('/events/{event}', [EventController::class, 'show'])
+    ->name('events.show');
 
 Route::get('/volunteer', function () {
     return view('pages.volunteer');
@@ -74,8 +77,26 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
-});
 
+    Route::get('/events', [EventController::class, 'adminIndex'])
+        ->name('admin.events.index');
+
+    Route::get('/events/create', [EventController::class, 'create'])
+        ->name('admin.events.create');
+
+    Route::post('/events', [EventController::class, 'store'])
+        ->name('admin.events.store');
+
+    Route::get('/events/{event}/edit', [EventController::class, 'edit'])
+        ->name('admin.events.edit');
+
+    Route::put('/events/{event}', [EventController::class, 'update'])
+        ->name('admin.events.update');
+
+    Route::delete('/events/{event}', [EventController::class, 'destroy'])
+        ->name('admin.events.destroy');
+
+});
 
 /*
 |--------------------------------------------------------------------------

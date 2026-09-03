@@ -470,22 +470,22 @@
 
     <div class="partner-grid">
 
-        <a href="#" class="partner-card">
+        <a href="https://acts1038.com/" class="partner-card">
             <strong>Acts 1038</strong>
             <span>Explore Partnership →</span>
         </a>
 
-        <a href="#" class="partner-card">
+        <a href="https://revebb.com/missions-aid-network/" class="partner-card">
             <strong>Mission Aid Network</strong>
             <span>Explore Partnership →</span>
         </a>
 
-        <a href="#" class="partner-card">
+        <a href="https://jagom.org/" class="partner-card">
             <strong>Jesus Army Global</strong>
             <span>Explore Partnership →</span>
         </a>
 
-        <a href="#" class="partner-card">
+        <a href="https://worldcerf.org/" class="partner-card">
             <strong>Children Emergency Relief Funds</strong>
             <span>Explore Partnership →</span>
         </a>
