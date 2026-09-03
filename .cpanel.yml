@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home1/inspirat/inspiration-house-app/
+    - export DEPLOYPATH=/home1/inspirat/public_html/inspiration-house-app/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R app $DEPLOYPATH
     - /bin/cp -R bootstrap $DEPLOYPATH
