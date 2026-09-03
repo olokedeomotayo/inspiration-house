@@ -242,7 +242,7 @@
                 that helps us plan and sustain our programmes.
             </p>
 
-            <a href="#">
+            <a href="/volunteer">
                 Become A Regular Supporter →
             </a>
 
@@ -262,7 +262,7 @@
                 expertise or funding towards specific initiatives.
             </p>
 
-            <a href="#">
+            <a href="/partnerships">
                 Become A Partner →
             </a>
 
@@ -353,7 +353,7 @@
             meaningful difference.
         </p>
 
-        <a href="#">
+        <a href="https://www.zeffy.com/en-US/donation-form/df23e329-052a-49c4-8c06-178fb0558678">
             Make A Donation →
         </a>
 
