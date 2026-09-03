@@ -6,7 +6,21 @@
 
 @section('content')
 
-<section class="inner-hero partnerships-hero">
+<section
+    class="inner-hero partnerships-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/community.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
 
     <div class="inner-hero-overlay"></div>
 
@@ -209,7 +223,7 @@
     <div class="partnership-feature-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/community2.jpg') }}"
             alt="Inspiration House partnership and collaboration"
         >
 

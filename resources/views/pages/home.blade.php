@@ -82,7 +82,7 @@
     <div class="intro-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/community.jpg') }}"
             alt="Inspiration House community work"
         >
 
@@ -115,7 +115,7 @@
             individuals and communities to thrive.
         </p>
 
-        <a href="#">
+        <a href="/services">
             Learn More About Us →
         </a>
 
@@ -161,7 +161,7 @@
                 improve everyday lives and create sustainable local impact.
             </p>
 
-            <a href="#">
+            <a href="/services">
                 Explore Our Work →
             </a>
 
@@ -182,7 +182,7 @@
                 individuals and communities facing difficult circumstances.
             </p>
 
-            <a href="#">
+            <a href="/services">
                 Explore Our Work →
             </a>
 
@@ -203,7 +203,7 @@
                 confidence, leadership capacity and a stronger future.
             </p>
 
-            <a href="#">
+            <a href="/services">
                 Explore Our Work →
             </a>
 
@@ -224,7 +224,7 @@
                 resources that help people discover new possibilities.
             </p>
 
-            <a href="#">
+            <a href="/services">
                 Explore Our Work →
             </a>
 
@@ -263,7 +263,7 @@
 
             <div class="initiative-image">
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/community2.jpg') }}"
                     alt="Community initiative"
                 >
 
@@ -287,7 +287,7 @@
                     assistance, collaboration and local action.
                 </p>
 
-                <a href="#">
+                <a href="services">
                     View Initiative →
                 </a>
 
@@ -300,7 +300,7 @@
 
             <div class="initiative-image">
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/youth.jpg') }}"
                     alt="Youth empowerment initiative"
                 >
 
@@ -324,7 +324,7 @@
                     learning, mentorship and practical development.
                 </p>
 
-                <a href="#">
+                <a href="/services">
                     View Initiative →
                 </a>
 
@@ -337,7 +337,7 @@
 
             <div class="initiative-image">
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/learn.jpg') }}"
                     alt="Education initiative"
                 >
 
@@ -361,7 +361,7 @@
                     and opportunities for personal development.
                 </p>
 
-                <a href="#">
+                <a href="#/services>
                     View Initiative →
                 </a>
 
@@ -418,7 +418,7 @@
 
         </div>
 
-        <a href="#">
+        <a href="/services">
             Learn About Our Work →
         </a>
 
@@ -428,7 +428,7 @@
     <div class="feature-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/compassion.jpg') }}"
             alt="Inspiration House community engagement"
         >
 
@@ -513,7 +513,7 @@
 
         </div>
 
-        <a href="#">
+        <a href="/services">
             View All Stories →
         </a>
 
@@ -660,7 +660,7 @@
 
         </div>
 
-        <a href="#">
+        <a href="/gallery">
             View Full Gallery →
         </a>
 
@@ -684,7 +684,7 @@
         </a>
 
 
-        <a href="#" class="gallery-item">
+        <a href="/gallery" class="gallery-item">
 
             <img
                 src="{{ asset('images/gallery/gallery-2.jpg') }}"
@@ -699,7 +699,7 @@
         </a>
 
 
-        <a href="#" class="gallery-item">
+        <a href="/gallery" class="gallery-item">
 
             <img
                 src="{{ asset('images/gallery/gallery-3.jpg') }}"
@@ -714,7 +714,7 @@
         </a>
 
 
-        <a href="#" class="gallery-item">
+        <a href="/gallery" class="gallery-item">
 
             <img
                 src="{{ asset('images/gallery/gallery-4.jpg') }}"
@@ -729,7 +729,7 @@
         </a>
 
 
-        <a href="#" class="gallery-item">
+        <a href="/gallery" class="gallery-item">
 
             <img
                 src="{{ asset('images/gallery/gallery-5.jpg') }}"
@@ -769,15 +769,15 @@
 
         <div class="cta-actions">
 
-            <a href="#">
+            <a href="/partnerships">
                 Become A Partner
             </a>
 
-            <a href="#">
+            <a href="/donate">
                 Donate
             </a>
 
-            <a href="#">
+            <a href="/volunteer">
                 Volunteer
             </a>
 

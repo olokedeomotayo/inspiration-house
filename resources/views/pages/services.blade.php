@@ -6,7 +6,21 @@
 
 @section('content')
 
-<section class="inner-hero services-hero">
+<section
+    class="inner-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/youth.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
 
     <div class="inner-hero-overlay"></div>
 
@@ -190,7 +204,7 @@
     <div class="services-feature-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/services.jpg') }}"
             alt="Inspiration House community work"
         >
 

@@ -4,14 +4,29 @@
 
 @section('description', 'Learn about Inspiration House, our mission, values and commitment to strengthening communities and creating lasting social impact.')
 
+@section('hero-image', asset('images/community.jpg'))
+
 @section('content')
 
 {{-- =========================================================
      PAGE HERO
      ========================================================= --}}
 
-<section class="inner-hero">
-
+<section
+    class="inner-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/Community.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
     <div class="inner-hero-overlay"></div>
 
     <div class="inner-hero-content">
@@ -42,7 +57,7 @@
     <div class="about-intro-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/community.jpg') }}"
             alt="Inspiration House community engagement"
         >
 
@@ -293,7 +308,7 @@
                 Partner With Us
             </a>
 
-            <a href="#">
+            <a href="https://www.zeffy.com/en-US/donation-form/df23e329-052a-49c4-8c06-178fb0558678">
                 Donate
             </a>
 

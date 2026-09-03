@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>@yield('title', config('app.name', 'Inspiration House'))</title>
+
+    <meta name="description"
+      content="@yield('description', 'Inspiration House — building stronger communities and creating lasting social impact.')">
+
+   
 
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon/favicon.ico') }}">
-
-    <meta name="description" content="@yield('description', 'Inspiration House — building stronger communities and creating lasting social impact.')">
-
-    <title>@yield('title', 'Inspiration House')</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="min-h-screen">
+<body>
 
-    {{-- Website Navigation --}}
-    @include('layouts.navigation')
+    @if (isset($slot))
+        {{-- Breeze Authentication Pages --}}
+        {{ $slot }}
+    @else
+        {{-- Inspiration House Public Website --}}
+        @include('layouts.navigation')
 
-    {{-- Main Page Content --}}
-    <main>
-        @yield('content')
-    </main>
+        <main>
+            @yield('content')
+        </main>
 
-    {{-- Website Footer --}}
-    @include('layouts.footer')
+        @include('layouts.footer')
+    @endif
 
 </body>
 </html>

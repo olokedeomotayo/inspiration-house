@@ -10,7 +10,21 @@
      PAGE HERO
      ========================================================= --}}
 
-<section class="inner-hero">
+<section
+    class="inner-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/youth.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
 
     <div class="inner-hero-overlay"></div>
 
@@ -90,7 +104,7 @@
             <div class="leader-image">
 
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/Emmanuel.jpg') }}"
                     alt="Inspiration House leader"
                 >
 
@@ -101,22 +115,14 @@
                 <span>FOUNDER / DIRECTOR</span>
 
                 <h3>
-                    Leader Name
+                    Emmanuel Baba-Lola
                 </h3>
 
                 <p>
-                    Providing vision and strategic direction for the
-                    organization and its community-focused initiatives.
+                    Emmanuel Baba-Lola is an alumnus of Youth With A Mission (YWAM) Jamaica and was later consecrated a Reverend Gentleman in October 1992 under the hands of the Reverend Isaac O. Crown of the Omega Faith Generation Ministries.
                 </p>
 
-                <div class="leader-socials">
-
-                    <a href="#">LinkedIn</a>
-
-                    <a href="#">Email</a>
-
-                </div>
-
+                
             </div>
 
         </article>
@@ -129,7 +135,7 @@
             <div class="leader-image">
 
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/Sunday.jpeg') }}"
                     alt="Inspiration House team member"
                 >
 
@@ -140,21 +146,16 @@
                 <span>PROGRAMMES DIRECTOR</span>
 
                 <h3>
-                    Leader Name
+                    Sunday Oyeleye
                 </h3>
 
                 <p>
-                    Supporting programme development, implementation and
-                    community engagement.
+                    Pastor Sunday Oyeleye is an ordained pastor 
+                    and global minister, leading online services and prayer platforms.  
+                    He also coordinates outreach at Inspiration House in San Antonio, TX.
                 </p>
 
-                <div class="leader-socials">
-
-                    <a href="#">LinkedIn</a>
-
-                    <a href="#">Email</a>
-
-                </div>
+               
 
             </div>
 
@@ -168,7 +169,7 @@
             <div class="leader-image">
 
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/Enitan.jpeg') }}"
                     alt="Inspiration House team member"
                 >
 
@@ -179,21 +180,15 @@
                 <span>PARTNERSHIPS LEAD</span>
 
                 <h3>
-                    Leader Name
+                    Eniola Akintokun
                 </h3>
 
                 <p>
-                    Building relationships with organizations, initiatives
-                    and people working towards shared goals.
+                    Enitan Bunmi Akintokun, an HND graduate and accountant, entered the non-profit sector in 2018. 
+                    She works on projects in community health, women’s empowerment, and support for orphans. 
                 </p>
 
-                <div class="leader-socials">
-
-                    <a href="#">LinkedIn</a>
-
-                    <a href="#">Email</a>
-
-                </div>
+                
 
             </div>
 
@@ -207,7 +202,7 @@
             <div class="leader-image">
 
                 <img
-                    src="{{ asset('images/hero.jpg') }}"
+                    src="{{ asset('images/Tope.jpg') }}"
                     alt="Inspiration House team member"
                 >
 
@@ -218,21 +213,15 @@
                 <span>COMMUNITY LEAD</span>
 
                 <h3>
-                    Leader Name
+                    Tope Umoh
                 </h3>
 
                 <p>
-                    Working closely with communities and supporting
-                    initiatives that respond to local needs.
+                    Temitope Umoh is a missionary, pastor, and counselor in Kenya. 
+                    She leads “Women of Power and Purpose” and hosts the daily broadcast, RELEASE. She lives in Nairobi with her husband, coordinating outreach in Kenya and Uganda.
                 </p>
 
-                <div class="leader-socials">
-
-                    <a href="#">LinkedIn</a>
-
-                    <a href="#">Email</a>
-
-                </div>
+                
 
             </div>
 

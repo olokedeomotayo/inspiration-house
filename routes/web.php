@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Public Website Routes
+|--------------------------------------------------------------------------
+*/
 
 Route::get('/', function () {
     return view('pages.home');
@@ -53,3 +60,47 @@ Route::get('/privacy-policy', function () {
 Route::get('/terms-of-use', function () {
     return view('pages.terms');
 })->name('terms');
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Dashboard
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')->prefix('admin')->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Breeze Profile Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/profile', [ProfileController::class, 'edit'])
+        ->name('profile.edit');
+
+    Route::patch('/profile', [ProfileController::class, 'update'])
+        ->name('profile.update');
+
+    Route::delete('/profile', [ProfileController::class, 'destroy'])
+        ->name('profile.destroy');
+
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Authentication Routes
+|--------------------------------------------------------------------------
+*/
+
+require __DIR__.'/auth.php';

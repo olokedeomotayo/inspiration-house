@@ -10,7 +10,21 @@
      PAGE HERO
      ========================================================= --}}
 
-<section class="inner-hero">
+<section
+    class="inner-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/services.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
 
     <div class="inner-hero-overlay"></div>
 

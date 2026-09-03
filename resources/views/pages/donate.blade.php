@@ -10,7 +10,21 @@
      PAGE HERO
      ========================================================= --}}
 
-<section class="inner-hero">
+<section
+    class="inner-hero"
+    style="
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(38, 9, 9, 0.88),
+                rgba(38, 9, 9, 0.52)
+            ),
+            url('{{ asset('images/donate1.jpg') }}');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    "
+>
 
     <div class="inner-hero-overlay"></div>
 
@@ -208,7 +222,7 @@
                 that matter to you.
             </p>
 
-            <a href="#">
+            <a href="https://www.zeffy.com/en-US/donation-form/df23e329-052a-49c4-8c06-178fb0558678">
                 Donate Now →
             </a>
 
@@ -268,7 +282,7 @@
     <div class="donation-transparency-image">
 
         <img
-            src="{{ asset('images/hero.jpg') }}"
+            src="{{ asset('images/donate1.jpg') }}"
             alt="Inspiration House community impact"
         >
 

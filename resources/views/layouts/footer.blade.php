@@ -51,7 +51,7 @@
             <p>Partner with us and help create meaningful community impact.</p>
         </div>
 
-        <a href="#">Donate</a>
+        <a href="https://www.zeffy.com/en-US/donation-form/df23e329-052a-49c4-8c06-178fb0558678">Donate</a>
 
     </div>
 
