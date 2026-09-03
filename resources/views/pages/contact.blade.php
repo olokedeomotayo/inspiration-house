@@ -87,7 +87,7 @@
                 <strong>PHONE</strong>
 
                 <a href="tel:+2340000000000">
-                    +234 000 000 0000
+                    512-893-2564
                 </a>
 
             </div>
@@ -98,31 +98,8 @@
                 <strong>LOCATION</strong>
 
                 <p>
-                    Nigeria
+                    Inspiration House, 1713 S Mays Street STE C, Round Rock, TX78664
                 </p>
-
-            </div>
-
-
-            <div class="contact-detail">
-
-                <strong>CONNECT</strong>
-
-                <div class="contact-socials">
-
-                    <a href="#">
-                        Facebook
-                    </a>
-
-                    <a href="#">
-                        Instagram
-                    </a>
-
-                    <a href="#">
-                        LinkedIn
-                    </a>
-
-                </div>
 
             </div>
 

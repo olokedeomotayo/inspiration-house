@@ -46,14 +46,31 @@
 
     <div class="footer-contact">
 
-        <div>
-            <strong>Get Involved</strong>
-            <p>Partner with us and help create meaningful community impact.</p>
-        </div>
+    <div>
+        <strong>Visit Us</strong>
 
-        <a href="https://www.zeffy.com/en-US/donation-form/df23e329-052a-49c4-8c06-178fb0558678">Donate</a>
-
+        <p>
+            Inspiration House<br>
+            1713 S Mays Street STE C<br>
+            Round Rock, TX 78664
+        </p>
     </div>
+
+    <div>
+        <strong>Contact Us</strong>
+
+        <p>
+            <a href="tel:5128932564">
+                512-893-2564
+            </a>
+        </p>
+    </div>
+
+    <a href="{{ route('donate') }}">
+        Donate
+    </a>
+
+</div>
 
     <div class="footer-bottom">
         <p>
